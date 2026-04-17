@@ -47,7 +47,7 @@ body {
   transition: background 0.25s, color 0.25s;
 }
 
-/* ── NAV ── */
+/* Navigation section */
 nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -135,7 +135,7 @@ nav {
 .mobile-menu a::before { content: '> '; color: var(--accent); }
 .mobile-menu a:hover { color: var(--accent); background: var(--glow); }
 
-/* ── LAYOUT ── */
+/* Layout */
 .container { max-width: 900px; margin: 0 auto; padding: 0 2.5rem; }
 section { padding: 5.5rem 0; }
 section + section { border-top: 1px solid var(--border); }
@@ -144,7 +144,7 @@ section + section { border-top: 1px solid var(--border); }
 .section-title { font-family: 'Space Mono', monospace; font-size: 1.5rem; font-weight: 700; color: var(--accent); letter-spacing: -0.01em; }
 .section-rule  { flex: 1; height: 1px; background: var(--border); }
 
-/* ── TERMINAL ── */
+/* Terminal windows */
 .term-window {
   border: 1px solid var(--border);
   background: var(--bg2);
@@ -171,7 +171,7 @@ section + section { border-top: 1px solid var(--border); }
 .t-val    { color: var(--amber); }
 .t-cur    { display: inline-block; width: 8px; height: 13px; background: var(--accent); vertical-align: middle; animation: blink 1s step-end infinite; margin-left: 4px; }
 
-/* ── HERO ── */
+/* Hero section */
 #hero {
   min-height: 100vh;
   display: flex;
@@ -249,7 +249,7 @@ section + section { border-top: 1px solid var(--border); }
 .btn-ghost { border-color: var(--border); color: var(--muted); }
 .btn-ghost:hover { border-color: var(--muted); color: var(--text); background: transparent; }
 
-/* ── ABOUT ── */
+/* About information */
 .about-top {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -283,8 +283,7 @@ section + section { border-top: 1px solid var(--border); }
   50%       { opacity: 0.4; transform: scale(0.8); }
 }
 
-
-/* ── EXPERIENCE ACCORDION ── */
+/* Experience accordion */
 .exp-card {
   border: 1px solid var(--border);
   background: var(--bg2);
@@ -353,7 +352,7 @@ section + section { border-top: 1px solid var(--border); }
 .exp-bullets li::before { content: '▸'; position: absolute; left: 0; color: var(--accent2); font-size: 10px; top: 5px; }
 [data-theme="light"] .exp-bullets li::before { color: var(--accent); opacity: 0.5; }
 
-/* ── PROJECTS ── */
+/* Projects information */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
@@ -387,7 +386,7 @@ section + section { border-top: 1px solid var(--border); }
 .tag-row { display: flex; flex-wrap: wrap; gap: 5px; }
 .tag { font-size: 10px; font-weight: bold; padding: 2px 8px; border: 1px solid var(--border); color: var(--muted); letter-spacing: 0.02em; }
 
-/* ── SKILLS ── */
+/* Skills information */
 .skills-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
 .skill-group { margin-bottom: 2rem; }
 .skill-group:last-child { margin-bottom: 0; }
@@ -406,7 +405,7 @@ section + section { border-top: 1px solid var(--border); }
 .skill-pill { font-size: 11px; padding: 4px 10px; border: 1px solid var(--border); color: var(--text); opacity: 0.75; transition: border-color 0.15s, opacity 0.15s; }
 .skill-pill:hover { border-color: var(--accent2); opacity: 1; }
 
-/* ── EDUCATION ── */
+/* Education information */
 .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
 .edu-group-name {
   font-size: 10px;
@@ -426,7 +425,7 @@ section + section { border-top: 1px solid var(--border); }
 .edu-where { font-size: 12px; font-weight: bold; color: var(--accent); opacity: 0.8; margin-bottom: 5px; }
 .edu-desc  { font-size: 12px; font-weight: bold; color: var(--muted); line-height: 1.6; }
 
-/* ── CONTACT ── */
+/* Contact information */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
 .contact-copy p { font-size: 13px; font-weight: bold; color: var(--muted); line-height: 1.8; margin-bottom: 0.6rem; }
 .contact-copy .hi { color: var(--accent); }
@@ -445,7 +444,7 @@ section + section { border-top: 1px solid var(--border); }
 .contact-link:hover { color: var(--accent); }
 .c-icon { font-size: 11px; color: var(--accent); width: 18px; text-align: center; opacity: 0.6; flex-shrink: 0; }
 
-/* ── FOOTER ── */
+/* Footer */
 footer {
   border-top: 1px solid var(--border);
   max-width: 900px;
@@ -459,7 +458,7 @@ footer {
   opacity: 0.5;
 }
 
-/* ── RESPONSIVE ── */
+/* Responsive */
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .theme-toggle { border-left: 1px solid var(--border); }
@@ -478,11 +477,201 @@ footer {
   .hero-name { font-size: clamp(2.2rem, 12vw, 3rem); }
   .nav-brand { font-size: 11px; }
 }
+
+/* Welcome modal */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: fadeInBackdrop 0.3s ease;
+}
+
+.modal-backdrop.hiding {
+  animation: fadeOutBackdrop 0.3s ease forwards;
+}
+
+@keyframes fadeInBackdrop  { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeOutBackdrop { from { opacity: 1; } to { opacity: 0; } }
+
+.modal {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  max-width: 480px;
+  width: 100%;
+  position: relative;
+  animation: slideUp 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-backdrop.hiding .modal {
+  animation: slideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes slideUp   { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes slideDown { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(24px); } }
+
+.modal-bar {
+  background: var(--bg3);
+  border-bottom: 1px solid var(--border);
+  padding: 9px 14px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.modal-bar .term-dot { width: 10px; height: 10px; border-radius: 50%; }
+
+.modal-bar-title {
+  margin-left: 6px;
+  font-size: 11px;
+  color: var(--muted);
+  flex: 1;
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.modal-close {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-size: 14px;
+  cursor: pointer;
+  font-family: 'JetBrains Mono', monospace;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.15s;
+}
+.modal-close:hover { color: var(--accent); }
+
+.modal-body {
+  padding: 2rem 2rem 1.5rem;
+}
+
+.modal-eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.6;
+  margin-bottom: 0.75rem;
+}
+
+.modal-heading {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+}
+
+.modal-text {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.85;
+  margin-bottom: 0.75rem;
+}
+
+.modal-text:last-of-type { margin-bottom: 0; }
+
+.modal-notice {
+  margin-top: 1.25rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  background: var(--bg3);
+  font-size: 11px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modal-notice-icon { color: var(--amber); flex-shrink: 0; }
+
+.modal-footer {
+  padding: 1rem 2rem 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  padding: 9px 22px;
+  border: 1px solid var(--accent2);
+  color: var(--accent);
+  background: transparent;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  transition: all 0.15s;
+}
+.modal-btn:hover { background: var(--glow); border-color: var(--accent); }
+
+.reopen-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  background: var(--bg2);
+  color: var(--muted);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  z-index: 8000;
+}
+
+.reopen-btn.visible {
+  opacity: 0.85;
+  pointer-events: auto;
+}
+
+.reopen-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent2);
+}
 </style>
 </head>
 <body>
 
-<!-- ── NAV ── -->
+<!-- Welcome modal -->
+<div class="modal-backdrop" id="welcomeModal" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
+  <div class="modal">
+    <div class="modal-bar">
+      <div class="term-dot r" style="background:#ff5f57"></div>
+      <div class="term-dot y" style="background:#febc2e"></div>
+      <div class="term-dot g" style="background:#28c840"></div>
+      <span class="modal-bar-title">welcome.txt</span>
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+    </div>
+    <div class="modal-body">
+      <p class="modal-eyebrow">// incoming transmission</p>
+      <h2 class="modal-heading" id="modalHeading">Hello World!</h2>
+      <p class="modal-text">Welcome to my portfolio! I really appreciate you taking the time to have a look around. I hope you enjoy what you find!</p>
+      <p class="modal-text">I'm currently away on my grad trip and won't be back until <strong style="color:var(--accent)">May 4th</strong>. If you'd like to connect or have any questions, feel free to reach out and I'll get back to you as soon as I'm back.</p>
+      <div class="modal-notice">
+        <span class="modal-notice-icon">✦</span>
+        <span>Back on May 4th — response time may be a little slower until then.</span>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="modal-btn" onclick="closeModal()">./explore_site</button>
+    </div>
+  </div>
+</div>
+
+<!-- Navigation section -->
 <nav>
   <div class="nav-brand"><span>joshua</span>@hophing<span>:~$</span> _</div>
   <div class="nav-right">
@@ -508,7 +697,7 @@ footer {
   <a href="#contact"    onclick="closeMobile()">contact</a>
 </div>
 
-<!-- ── HERO ── -->
+<!-- Hero section -->
 <section id="hero">
   <div class="hero-inner">
     <div class="hero-layout">
@@ -523,6 +712,7 @@ footer {
           <a href="#projects"   class="btn">./view_projects</a>
           <a href="#experience" class="btn">./experience</a>
           <a href="#contact"    class="btn btn-ghost">./get_in_touch</a>
+          <button id="reopenModalBtn" class="reopen-btn" onclick="openModal()">./missed_message </button>
         </div>
       </div>
 
@@ -540,7 +730,7 @@ footer {
   </div>
 </section>
 
-<!-- ── ABOUT ── -->
+<!-- About information -->
 <section id="about">
   <div class="container">
     <div class="section-header">
@@ -583,7 +773,7 @@ footer {
   </div>
 </section>
 
-<!-- ── EXPERIENCE ── -->
+<!-- Experience information -->
 <section id="experience">
   <div class="container">
     <div class="section-header">
@@ -637,7 +827,7 @@ footer {
   </div>
 </section>
 
-<!-- ── PROJECTS ── -->
+<!-- Projects information -->
 <section id="projects">
   <div class="container">
     <div class="section-header">
@@ -693,7 +883,7 @@ footer {
   </div>
 </section>
 
-<!-- ── SKILLS ── -->
+<!-- Skills information -->
 <section id="skills">
   <div class="container">
     <div class="section-header">
@@ -765,7 +955,7 @@ footer {
   </div>
 </section>
 
-<!-- ── EDUCATION ── -->
+<!-- Education Information -->
 <section id="education">
   <div class="container">
     <div class="section-header">
@@ -813,7 +1003,7 @@ footer {
   </div>
 </section>
 
-<!-- ── CONTACT ── -->
+<!-- Contact Information -->
 <section id="contact">
   <div class="container">
     <div class="section-header">
@@ -849,7 +1039,7 @@ footer {
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-/* ── THEME ── */
+/* Theme */
 const html = document.documentElement;
 const themeBtn = document.getElementById('themeToggle');
 function applyTheme(t) {
@@ -864,7 +1054,7 @@ themeBtn.addEventListener('click', () =>
   applyTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark')
 );
 
-/* ── MOBILE NAV ── */
+/* Mobile navigation */
 const hamburger  = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 hamburger.addEventListener('click', () => {
@@ -881,14 +1071,14 @@ function closeMobile() {
 }
 window.addEventListener('resize', () => { if (window.innerWidth > 768) closeMobile(); });
 
-/* ── ACCORDION ── */
+/* Accordion */
 function toggleExp(id) {
   const card = document.getElementById(id);
   const isOpen = card.classList.toggle('open');
   card.querySelector('.exp-trigger').setAttribute('aria-expanded', isOpen);
 }
 
-/* ── TYPING ── */
+/* Typing effect */
 const phrases = [
   'distributed systems',
   'data infrastructure',
@@ -907,7 +1097,65 @@ function tick() {
 }
 setTimeout(tick, 900);
 
-/* ── EMAIL OBFUSCATION ── */
+/* Welcome modal */
+(function () {
+  const STORAGE_KEY = 'jh_welcomed';
+  const modal = document.getElementById('welcomeModal');
+  const btn = document.getElementById('reopenModalBtn');
+
+  // Only show once per browser session (clears when tab/browser closes)
+  if (sessionStorage.getItem(STORAGE_KEY)) {
+    modal.style.display = 'none';
+    btn.classList.add('visible');
+    return;
+  }
+
+  // Close on backdrop click (outside the modal box)
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) closeModal();
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeModal();
+  });
+})();
+
+function openModal() {
+  const modal = document.getElementById('welcomeModal');
+  modal.style.display = 'flex';
+}
+
+// function closeModal() {
+//   const modal = document.getElementById('welcomeModal');
+//   if (!modal || modal.style.display === 'none') return;
+//   modal.classList.add('hiding');
+//   setTimeout(function () {
+//     modal.style.display = 'none';
+//     modal.classList.remove('hiding');
+//     sessionStorage.setItem('jh_welcomed', '1');
+//   }, 280);
+// }
+function closeModal() {
+  const modal = document.getElementById('welcomeModal');
+  const btn = document.getElementById('reopenModalBtn');
+
+  if (!modal || modal.style.display === 'none') return;
+
+  modal.classList.add('hiding');
+
+  setTimeout(function () {
+    modal.style.display = 'none';
+    modal.classList.remove('hiding');
+
+    sessionStorage.setItem('jh_welcomed', '1');
+
+    // show the reopen button
+    btn.classList.add('visible');
+  }, 280);
+}
+
+/* Hide email */
 (function () {
   const e = atob('am9zaHVhaGg3QGdtYWlsLmNvbQ==');
   const link = document.getElementById('emailLink');
